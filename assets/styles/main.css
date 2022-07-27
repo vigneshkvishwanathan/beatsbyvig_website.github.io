@@ -1,0 +1,231 @@
+:root {
+    font-size: 14px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #fff;
+    --gray-bg: #202229;
+    --gray-tag: #30333e;
+    --gray-text: #9ca1b1;
+}
+html, body {
+    width: 100vw;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+}
+body {
+    padding: 2rem;
+    padding-top: 4rem;
+    box-sizing: border-box;
+}
+#about-me {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#logo {
+    width: 10rem;
+    height: 10rem;
+    object-fit: contain;
+}
+#name {
+    font-size: 3rem;
+    margin: 1rem 0;
+}
+#jobs {
+    font-size: 2rem;
+    margin: 1rem 0;
+    color: var(--gray-text);
+    margin: 0;
+}
+#bio {
+    font-size: 1.2rem;
+    width: 30rem;
+    text-align: center;
+    margin: 1rem;
+}
+#my-links {
+    margin: 0;
+    padding: 0;
+    font-size: 1.5rem;
+}
+.bio-link {
+    height: 3rem;
+    width: 3rem;
+    margin: 0 0.25rem;
+    padding: 0.3rem;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    text-decoration: none;
+    border-radius: .5rem;
+    color: #8E2DE2;
+    transition: color .15s ease-in-out;
+}
+.bio-link:hover {
+    color: #fff;
+}
+#portfolio {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 2rem;
+}
+.col {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    min-width: fit-content;
+    margin: 2rem;
+}
+#soundkits {
+    /* margin: 0 5rem; */
+}
+.col-header {
+    margin: 0 auto;
+    margin-bottom: 1rem;
+}
+.cards-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.card {
+    display: flex;
+    flex-direction: row;
+    padding: 1.5rem;
+    background-color: var(--gray-bg);
+    margin: 1rem 0;
+    height: 10rem;
+    width: 30rem;
+    border-radius: 1rem;
+    position: relative;
+}
+.card-screen {
+    display: none;
+    flex-direction: row;
+}
+.card-screen-current {
+    display: flex;
+}
+.card-cover {
+    width: 10rem;
+    height: 10rem;
+    border-radius: .5rem;
+}
+.card-details {
+    padding: 0 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+.card-header, .card-subheader, .card-description {
+    margin: 0;
+}
+.card-header {
+    font-size: 1.5rem;
+}
+.card-subheader {
+    color: var(--gray-text);
+    margin-top: .25rem;
+}
+.card-artists-container, .card-description {
+    margin-top: .5rem;
+}
+.card-artists-container {
+    display: flex;
+    flex-direction: row;
+    margin-top: .75rem;
+}
+.card-artist {
+    padding: .3rem .6rem;
+    background-color: var(--gray-tag);
+    margin-top: 0;
+    margin-right: .5rem;
+    margin-bottom: .5rem;
+    border-radius: .5rem;
+    font-size: .9rem;
+    color: var(--gray-text);
+}
+.card-artist-primary {
+    color: #fff;
+    font-weight: bold;
+}
+.card-links {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    align-items: flex-end;
+}
+.card-link, .card-link-wide {
+    height: 2rem;
+    width: 2rem;
+    padding: .15rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    background-color: var(--gray-tag);
+    margin-right: .5rem;
+    text-decoration: none;
+    border-radius: .5rem;
+    color: var(--gray-text);
+    transition: color .15s ease-in-out;
+}
+.card-link-wide {
+font-size: 1rem;
+}
+.card-link-wide i {
+    font-size: 1.2rem;
+}
+.card-link:hover {
+    color: #fff;
+}
+.card-link:hover .fa-spotify {color: #1db954;}
+.card-link:hover .fa-youtube {color: #ff0000;}
+.card-link:hover .fa-soundcloud {color: #ff7700;}
+.card-link-wide {
+    width: fit-content;
+    padding: .15rem .6rem;
+}
+.card-link-wide:hover .fa-youtube {
+    color: #fff;
+}
+.card-link-wide .card-link-text {
+    margin-left: .5rem;
+}
+.pagination-container {
+    display: flex;
+    flex-direction: row;
+    padding: .3rem .6rem;
+    border-radius: 500px;
+    background-color: var(--gray-bg);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -1.25rem;
+}
+.pagination-indicators-container {
+    display: flex;
+    flex-direction: row;
+    margin: 0 0.5rem;
+}
+.pagination-indicator {
+    height: 2rem;
+    width: 1.5rem;
+    font-size: .75rem;
+    color: var(--gray-text);
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+.pagination-indicator-current {
+    color: #fff;
+}
+#boilerplates {
+    display: none;
+}
