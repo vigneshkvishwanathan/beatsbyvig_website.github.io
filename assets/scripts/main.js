@@ -77,3 +77,15 @@ function buildPaginator(screensNumber) {
     // return the new paginator
     return newPaginator;
 }
+
+// define a function to set the correct viewport height for mobile
+const setViewport = function() {
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+}
+setViewport();
+
+// listen for window resizes
+window.addEventListener('resize', () => {
+    setViewport();
+});

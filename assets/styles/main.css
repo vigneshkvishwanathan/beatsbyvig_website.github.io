@@ -8,7 +8,7 @@
 }
 html, body {
     width: 100vw;
-    height: auto;
+    height: 100vh;
     margin: 0;
     padding: 0;
     background-color: #000;
@@ -161,7 +161,7 @@ body {
     flex-grow: 1;
     align-items: flex-end;
 }
-.card-link, .card-link-wide {
+.card-link {
     height: 2rem;
     width: 2rem;
     padding: .15rem;
@@ -176,28 +176,12 @@ body {
     color: var(--gray-text);
     transition: color .15s ease-in-out;
 }
-.card-link-wide {
-font-size: 1rem;
-}
-.card-link-wide i {
-    font-size: 1.2rem;
-}
 .card-link:hover {
     color: #fff;
 }
 .card-link:hover .fa-spotify {color: #1db954;}
 .card-link:hover .fa-youtube {color: #ff0000;}
 .card-link:hover .fa-soundcloud {color: #ff7700;}
-.card-link-wide {
-    width: fit-content;
-    padding: .15rem .6rem;
-}
-.card-link-wide:hover .fa-youtube {
-    color: #fff;
-}
-.card-link-wide .card-link-text {
-    margin-left: .5rem;
-}
 .pagination-container {
     display: flex;
     flex-direction: row;
@@ -228,4 +212,34 @@ font-size: 1rem;
 }
 #boilerplates {
     display: none;
+}
+/* Mobile sizes */
+@media only screen and (max-device-width : 420px) and (orientation: portrait) {
+    :root {
+        font-size: 12px;
+    }
+    .col {
+        margin: 2rem 0;
+        min-width: 105%;
+    }
+    .card {
+        width: 100%;
+        box-sizing: border-box;
+        height: fit-content;
+        align-items: center;
+    }
+    .pagination-indicator {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .card-link {
+        height: 2.5rem;
+        width: 2.5rem;
+        font-size: 1.4rem;
+        margin-right: .75rem;
+    }
+    #bio {
+        width: 25rem;
+    }
 }
